@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الجدول الدوري</title>
+  <link rel="icon" type="image/png" href="Screenshot_2026-04-07_173259-removebg-preview.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <button class="lang-btn" id="lang-btn">English</button>
+
+  <header>
+    <h1 id="main-title">الجدول الدوري للعناصر</h1>
+    <p id="main-sub">انقر على أي عنصر لعرض تفاصيله</p>
+  </header>
+
+  <div class="legend" id="legend"></div>
+
+  <div class="table-wrap">
+    <div class="pt-grid" id="pt-grid"></div>
+    <div class="fblock" id="fblock"></div>
+  </div>
+
+  <!-- ── MODAL ── -->
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+
+      <div class="modal-header">
+        <div class="modal-badge" id="m-badge">
+          <span class="m-num" id="m-num"></span>
+          <span class="m-sym" id="m-sym"></span>
+          <span class="m-mass" id="m-mass"></span>
+        </div>
+        <div class="modal-title">
+          <h2 id="m-name"></h2>
+          <p id="m-cat"></p>
+          <p id="m-anomaly" style="color:#ffca28;font-size:.75rem;margin-top:4px;"></p>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="label" id="lbl-an">العدد الذري</div>
+          <div class="value" id="m-an"></div>
+        </div>
+        <div class="info-card">
+          <div class="label" id="lbl-am">العدد الكتلي</div>
+          <div class="value" id="m-am"></div>
+        </div>
+        <div class="info-card">
+          <div class="label" id="lbl-grp">المجموعة</div>
+          <div class="value" id="m-grp"></div>
+        </div>
+        <div class="info-card">
+          <div class="label" id="lbl-per">الدورة</div>
+          <div class="value" id="m-per"></div>
+        </div>
+      </div>
+
+      <div class="info-card" style="margin-bottom:14px;">
+        <div class="label" id="lbl-shells">توزيع الإلكترونات في المستويات</div>
+        <div class="value" id="m-shells" style="font-size:.8rem;word-break:break-all;"></div>
+      </div>
+
+      <div class="cfg-box">
+        <div class="cfg-label" id="lbl-cfg">التوزيع الإلكتروني (أوفباو)</div>
+        <div id="m-cfg" style="font-size:.95rem;font-weight:700;"></div>
+      </div>
+
+      <div class="orbital-section" style="margin-top:18px;">
+        <h3 id="lbl-orbital">التوزيع في المدارات</h3>
+        <canvas id="orb-canvas" class="orb-canvas"></canvas>
+      </div>
+
+      <div class="aufbau" id="aufbau-wrap">
+        <h3 id="lbl-aufbau">مبدأ أوفباو – صناديق المدارات</h3>
+        <div class="orb-subshells" id="aufbau-cont"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="elements.js"></script>
+  <script src="app.js"></script>
+
+  <!-- ── FOOTER ── -->
+  <footer class="main-footer">
+    <div class="copyright-text">
+     <h3>&copy; Eng : Amjad.T.Al-Garably :) (2026)</h3>
+    </div>
+
+    <div class="contact-links">
+
+      <!-- انستغرام -->
+      <a href="https://www.instagram.com/amgadgara/" target="_blank" class="social-link insta">
+        <i class="fa-brands fa-instagram"></i>
+        <span><h3>Amjad .t. al grabaly</h3></span>
+      </a>
+
+      <!-- Gmail -->
+      <a href="mailto:amjadgarab@gmail.com" class="social-link gmail">
+        <svg class="gmail-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#EA4335" d="M6 40V16l18 13L42 16v24H6z" />
+          <path fill="#FBBC04" d="M6 16l18 13 18-13H6z" />
+          <path fill="#34A853" d="M42 40V16L24 29z" />
+          <path fill="#4285F4" d="M6 40V16L24 29z" />
+          <path fill="#C5221F" d="M6 16h36v4L24 33 6 20v-4z" opacity=".2" />
+        </svg>
+        <span><h3>Email Me</h3></span>
+      </a>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
